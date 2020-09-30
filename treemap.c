@@ -89,7 +89,7 @@ void * searchTreeMap(TreeMap * tree, void* key) {
   if (aux -> key == key){
     return aux -> value;
   }
-  while(aux ->key != key){
+  while(aux == tree -> root){
     if (aux == NULL) {
       return NULL;
       }
