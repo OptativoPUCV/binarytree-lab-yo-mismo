@@ -88,18 +88,20 @@ void * searchTreeMap(TreeMap * tree, void* key) {
   TreeNode * aux;
   aux = tree -> root;
   while(0==is_equal(tree, aux ->key,key)){
+
     if (aux == NULL) {
       return NULL;
-      }
+    }
+    tree -> current = aux;
     if(is_equal(tree, aux ->key,key)){
-      tree -> current = aux;
+      
       return aux -> value;
     }else if (0==tree -> lower_than(aux -> key,key)){
       aux = aux -> left;
-      tree -> current = aux;
+
     }else if(1==tree -> lower_than(aux -> key,key)){
       aux = aux -> right;
-      tree -> current = aux;
+
     }
   }
   return aux -> value;
