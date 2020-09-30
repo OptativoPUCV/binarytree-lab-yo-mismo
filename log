@@ -1,0 +1,6 @@
+Wed Sep 30 20:04:19 UTC 2020: 
+ treemap.c | 20 ++++++++++++++++++--
+ 1 file changed, 18 insertions(+), 2 deletions(-)
+ tests:  4|7
+total_score: 5/70
+fb9545d
