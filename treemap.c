@@ -85,21 +85,20 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 
 void * searchTreeMap(TreeMap * tree, void* key) {
-  TreeNode* aux = tree -> root;
+  TreeNode * aux = (TreeNode *)malloc(sizeof(TreeNode));
   if (aux -> key == key){
     return aux -> value;
   }
-  while(aux == tree -> root){
+  aux = tree -> root;
+  while(aux->key != key){
     if (aux == NULL) {
       return NULL;
       }
     if(aux ->key > key){
       aux = aux -> right;
-    }
-    if (aux -> key < key){
+    }else if (aux -> key < key){
       aux = aux -> left;
-    }
-    if(aux -> key == key){
+    }else if(aux -> key == key){
       return aux -> value;
     }
   }
