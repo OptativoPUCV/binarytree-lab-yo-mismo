@@ -106,7 +106,7 @@ void * searchTreeMap(TreeMap * tree, void* key) {
   }
   tree -> current = aux;
   printf("salida por fuera");
-  return tree-> current -> value;
+  return tree-> root -> right;
 }
 
 
