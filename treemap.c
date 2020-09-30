@@ -93,14 +93,12 @@ void * searchTreeMap(TreeMap * tree, void* key) {
       }
     if(tree -> lower_than(aux ->key,key)){
       aux = aux -> right;
-      tree -> current = aux;
     }else if (tree -> lower_than(key,aux -> key)){
       aux = aux -> left;
-      tree -> current = aux;
     }else{
-      tree -> current = aux;
       return aux -> value;
     }
+    tree -> current = aux;
   }
   tree -> current = aux;
   return aux -> value;
