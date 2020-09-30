@@ -99,7 +99,7 @@ void * searchTreeMap(TreeMap * tree, void* key) {
     }else if (0==(tree -> lower_than(aux -> key,key))){
 
       aux = aux -> left;
-    }else if((1==tree -> lower_than(aux -> key,key))){
+    }else if(1==(tree -> lower_than(aux -> key,key))){
 
       aux = aux -> right;
     }
