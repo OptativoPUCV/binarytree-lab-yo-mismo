@@ -56,3 +56,8 @@ Wed Sep 30 21:53:00 UTC 2020:
  tests:  4|7
 total_score: 5/70
 f2e3b9b
+Wed Sep 30 21:57:36 UTC 2020: 
+ treemap.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+ tests:  0|0
+bfb1dd9
