@@ -91,15 +91,17 @@ void * searchTreeMap(TreeMap * tree, void* key) {
   }
   while(aux -> key != key){
     if (aux == NULL) {
-      printf("aaaaaaaa\n");
       break;
       }
 
     if(aux ->key > key){
+      printf("aaaaaaaa\n");
       aux = aux -> right;
     }else if (aux -> key < key){
+      printf("aaaaaaaa\n");
       aux = aux -> left;
     }else{
+      printf("aaaaaaaafinal\n");
       return aux -> value;
     }
   }
