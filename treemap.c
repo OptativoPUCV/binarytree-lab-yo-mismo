@@ -88,9 +88,6 @@ void * searchTreeMap(TreeMap * tree, void* key) {
   TreeNode * aux;
   aux = tree -> root;
   while(is_equal(tree, aux ->key,key)){
-    if (aux == NULL) {
-      return NULL;
-      }
     tree -> current = aux;
     if(1==is_equal(tree, aux ->key,key)){
       tree -> current = aux;
