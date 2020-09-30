@@ -91,9 +91,9 @@ void * searchTreeMap(TreeMap * tree, void* key) {
     if (aux == NULL) {
       return NULL;
       }
-    if(tree -> lower_than(aux ->key,key)){
+    if(tree -> lower_than(key,aux ->key)){
       aux = aux -> right;
-    }else if (tree -> lower_than(key,aux -> key)){
+    }else if (tree -> lower_than(aux -> key,key)){
       aux = aux -> left;
     }else{
       tree -> current = aux;
