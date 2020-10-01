@@ -93,16 +93,17 @@ void * searchTreeMap(TreeMap * tree, void* key) {
       return NULL;
     }
     tree -> current = aux;
-    if(is_equal(tree, aux ->key,key)){
-      return tree-> current -> value;
+    if (0==(tree -> lower_than(aux -> key,key))){
+
+      aux = aux -> left;
     }else if(1==(tree -> lower_than(aux -> key,key))){
 
       aux = aux -> right;
     
-    }else if (0==(tree -> lower_than(aux -> key,key))){
-
-      aux = aux -> left;
-    }
+    }else{
+      tree -> current = aux;
+      return tree-> current -> value;
+    } 
   }
   tree -> current = aux;
   printf("salida por fuera\n");
