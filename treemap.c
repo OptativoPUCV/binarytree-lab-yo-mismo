@@ -105,8 +105,7 @@ void * searchTreeMap(TreeMap * tree, void* key)
       aux = aux -> right;
     }
   }
-  tree -> current = aux;
-  return aux -> value;
+  return NULL;
 }
 
 
