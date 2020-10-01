@@ -91,6 +91,7 @@ void * searchTreeMap(TreeMap * tree, void* key)
   int i= 1;
   while(i ==1)
   {
+    if (aux == NULL) return NULL;
 
     tree -> current = aux;
     if(is_equal(tree, aux ->key,key))
@@ -102,7 +103,7 @@ void * searchTreeMap(TreeMap * tree, void* key)
     }else if(1==tree -> lower_than(aux -> key,key))
     {
       aux = aux -> right;
-    }else return NULL;
+    }
   }
   tree -> current = aux;
   return aux -> value;
