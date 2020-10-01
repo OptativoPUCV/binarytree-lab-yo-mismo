@@ -88,26 +88,20 @@ void * searchTreeMap(TreeMap * tree, void* key) {
   TreeNode * aux;
   aux = tree -> root;
   while(is_equal(tree, aux ->key,key)){
-    printf("entro\n");
     if (aux == NULL) {
       return NULL;
     }
     tree -> current = aux;
-    if (1==(tree -> lower_than(aux -> key,key))){
-
+    if(is_equal(tree, aux ->key,key)){
+      return aux -> value;
+    }else if (0==tree -> lower_than(aux -> key,key)){
       aux = aux -> left;
-    }else if(0==(tree -> lower_than(aux -> key,key))){
-
+    }else if(1==tree -> lower_than(aux -> key,key)){
       aux = aux -> right;
-    
-    }else{
-      tree -> current = aux;
-      return tree-> current -> value;
-    } 
+    }else return NULL;
   }
   tree -> current = aux;
-  printf("salida por fuera\n");
-  return tree-> current;
+  return aux -> value;
 }
 
 
