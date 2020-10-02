@@ -95,7 +95,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     printf("Xd\n");
   }else{
     tree -> current = node -> parent;
-    tree -> current -> right  = node -> right;
+    tree -> current -> left  = node -> right;
   }
 }
 
