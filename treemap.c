@@ -100,7 +100,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       tree -> current -> right = node -> right;
 
     }else{
-
+      tree -> current -> left = node -> left;
     }
 
   }
