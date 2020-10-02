@@ -85,6 +85,7 @@ TreeNode * minimum(TreeNode * x){
 void removeNode(TreeMap * tree, TreeNode* node) {
 
   if((node ->left == NULL) && (node ->right == NULL)){
+
     tree -> current = node -> parent;
     if(tree -> current -> left == node){
       tree -> current -> left = NULL;
@@ -92,7 +93,17 @@ void removeNode(TreeMap * tree, TreeNode* node) {
   
 
   }else if((node ->left != NULL) && (node ->right != NULL)){
-    printf("Xd\n");
+    //Nodo con dos hijos: Descienda al hijo izquierdo y obtenga el menor nodo del subárbol (con la función minimum). Reemplace los datos (key,value) de node con los del nodo "minimum". Elimine el nodo minimum (para hacerlo puede usar la misma función removeNode).
+    tree -> current = node -> left;
+    tree -> current = minimum(tree -> current);
+    node -> key = tree -> current -> key;
+    node -> value = tree -> current -> value;
+    tree -> current = node;
+
+
+
+
+
   }else{
     tree -> current = node -> parent;
     if (node -> right != NULL){
