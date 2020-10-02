@@ -421,3 +421,9 @@ Fri Oct  2 03:18:56 UTC 2020:
  tests:  16|4
 total_score: 30/70
 e45cacc
+Fri Oct  2 03:22:41 UTC 2020: 
+ treemap.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+ tests:  16|4
+total_score: 30/70
+ba1b786
