@@ -94,8 +94,8 @@ void removeNode(TreeMap * tree, TreeNode* node) {
   }else if((node ->left != NULL) && (node ->right != NULL)){
     printf("Xd\n");
   }else{
-    tree -> current = node;
-    tree -> current -> parent -> right = node -> right;
+    tree -> current = node -> parent;
+    tree -> current  = node -> right;
   }
 }
 
