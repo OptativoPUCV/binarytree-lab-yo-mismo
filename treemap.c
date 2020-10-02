@@ -109,7 +109,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         tree -> current -> left = node -> left;
       }
     }
-    node -> parent = tree -> current;
+    tree -> current = node -> parent;
 
   }
 
