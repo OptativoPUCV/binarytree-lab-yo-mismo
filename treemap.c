@@ -172,13 +172,16 @@ void * firstTreeMap(TreeMap * tree) {
   if (tree -> root == NULL){
     return NULL;
   } 
-  TreeNode * node;
-  node = tree -> root;
-  while(node -> left != NULL){
-    node = node -> left;
-
+  TreeNode * aux;
+  aux = tree -> root;
+  while(aux -> left != NULL){
+    if (aux -> left < aux){
+      aux = aux -> left;
+    }else{
+      aux = aux -> left;
+    }
   }
-  return node ;
+  return aux ;
 }
 
 void * nextTreeMap(TreeMap * tree) {
