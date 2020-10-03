@@ -173,13 +173,11 @@ void * firstTreeMap(TreeMap * tree) {
     return NULL;
   } 
   TreeNode * node;
-  while(node -> right != NULL){
+  while(node -> left != NULL){
     node = node -> left;
 
   }
-
-  tree -> current = node;
-  return tree -> current ;
+  return node ;
 }
 
 void * nextTreeMap(TreeMap * tree) {
