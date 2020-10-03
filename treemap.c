@@ -182,7 +182,7 @@ void * firstTreeMap(TreeMap * tree) {
     }
   }
   tree -> current = aux;
-  return tree ;
+  return tree -> current ;
 }
 
 void * nextTreeMap(TreeMap * tree) {
