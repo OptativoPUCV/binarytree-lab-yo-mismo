@@ -171,7 +171,7 @@ void * upperBound(TreeMap * tree, void* key) {
 void * firstTreeMap(TreeMap * tree) {
   TreeNode *node = tree -> root;
 
-  while(node  != NULL){
+  while(node -> left != NULL){
     printf("aaaaaa");
     tree -> current = node -> left;
     node = tree -> current;
