@@ -175,7 +175,7 @@ void * firstTreeMap(TreeMap * tree) {
 
   }
 
-  
+  tree -> current = node;
   return tree -> current ;
 }
 
