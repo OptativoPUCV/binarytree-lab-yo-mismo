@@ -172,12 +172,11 @@ void * firstTreeMap(TreeMap * tree) {
   TreeNode *node = tree -> root;
 
   while(node -> left != NULL){
-    printf("aaaaaa");
-    tree -> current = node -> left;
+    node = node -> left;
     node = tree -> current;
   }
   
-  return node;
+  return node ->value;
 }
 
 void * nextTreeMap(TreeMap * tree) {
