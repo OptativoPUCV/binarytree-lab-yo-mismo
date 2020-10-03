@@ -177,7 +177,7 @@ void * firstTreeMap(TreeMap * tree) {
     node = tree -> current;
   }
   
-  return tree -> root;
+  return node;
 }
 
 void * nextTreeMap(TreeMap * tree) {
