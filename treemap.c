@@ -160,14 +160,25 @@ void * searchTreeMap(TreeMap * tree, void* key)
   return NULL;
 }
 
+//La función void upperBound(TreeMap tree, void key) retorna el valor con clave igual a key. En caso de no encontrarlo retorna el primer valor asociado a una clave mayor o igual a key.
+//Para implementarla puede realizar una búsqueda normal y usar un puntero a nodo auxiliar ub_node que vaya guardando el nodo con la menor clave mayor o igual a key*. Finalmente retorne el valor del nodo ub_node.
+
+
+
 
 void * upperBound(TreeMap * tree, void* key) {
-    return NULL;
+  TreeNode *aux;
+  aux = searchTreeMap(tree,key);
+
+    
+  
+
+  return aux -> value;
 }
 
 
 
-// Implemente las funciones para recorrer la estructura: void firstTreeMap(TreeMap tree) retorna el primer valor del mapa (el menor). void nextTreeMap(TreeMap tree) retornar el siguiente valor del mapa a partir del puntero TreeNode* current. Recuerde actualizar este puntero.
+
 void * firstTreeMap(TreeMap * tree) {
   if (tree -> root == NULL){
     return NULL;
