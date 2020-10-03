@@ -179,6 +179,7 @@ void * firstTreeMap(TreeMap * tree) {
     node = node -> left;
 
   }
+  printf("%p",node -> value);
   return node ;
 }
 
