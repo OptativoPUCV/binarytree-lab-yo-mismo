@@ -170,7 +170,7 @@ void * upperBound(TreeMap * tree, void* key) {
 // Implemente las funciones para recorrer la estructura: void firstTreeMap(TreeMap tree) retorna el primer valor del mapa (el menor). void nextTreeMap(TreeMap tree) retornar el siguiente valor del mapa a partir del puntero TreeNode* current. Recuerde actualizar este puntero.
 void * firstTreeMap(TreeMap * tree) {
   TreeNode * node;
-  while(node -> left != NULL){
+  while(node -> right != NULL){
     node = node -> right;
 
   }
