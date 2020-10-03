@@ -173,6 +173,7 @@ void * firstTreeMap(TreeMap * tree) {
     return NULL;
   } 
   TreeNode * node;
+  node = tree -> root;
   while(node -> left != NULL){
     node = node -> left;
 
