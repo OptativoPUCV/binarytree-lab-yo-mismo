@@ -181,7 +181,8 @@ void * firstTreeMap(TreeMap * tree) {
       aux = aux -> left;
     }
   }
-  return aux ;
+  tree -> current = aux;
+  return tree ;
 }
 
 void * nextTreeMap(TreeMap * tree) {
