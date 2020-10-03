@@ -168,12 +168,14 @@ void * searchTreeMap(TreeMap * tree, void* key)
 
 void * upperBound(TreeMap * tree, void* key) {
   TreeNode *aux;
-  aux = searchTreeMap(tree,key);
-
+  aux = tree -> root;
+  while (key != aux -> key){
     
-  
+    printf("aa");
+    break;
+  }
 
-  return aux -> value;
+  return NULL;
 }
 
 
