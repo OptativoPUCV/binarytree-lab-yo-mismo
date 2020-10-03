@@ -174,7 +174,7 @@ void * firstTreeMap(TreeMap * tree) {
   } 
   TreeNode * aux;
   aux = tree -> root;
-  while(aux -> left != NULL){
+  while(aux != NULL){
     if (aux -> left < aux){
       aux = aux -> left;
     }else{
