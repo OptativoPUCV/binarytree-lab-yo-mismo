@@ -181,10 +181,10 @@ void * upperBound(TreeMap * tree, void* key) {
 
       aux = aux -> right;
     }
-    if(is_equal(tree,aux -> key,key)){
-      ub_node = aux;
-    }
-    if (tree -> lower_than(key,aux -> key)){
+    if ((is_equal(tree,aux -> key,key))||(tree -> lower_than(key,aux -> key))){
+      if(ub_node == NULL){
+        ub_node = aux;
+      }
       if ((tree -> lower_than(aux ->key ,ub_node))){
         ub_node = aux;
       }
