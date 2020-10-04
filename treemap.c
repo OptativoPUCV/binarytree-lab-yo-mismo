@@ -167,15 +167,27 @@ void * searchTreeMap(TreeMap * tree, void* key)
 
 
 void * upperBound(TreeMap * tree, void* key) {
-  TreeNode *aux;
+  TreeNode * aux;
+  TreeNode * ub_node;
   aux = tree -> root;
-  while (key != aux -> key){
-    
-    printf("aa");
-    break;
-  }
+  while(aux !=NULL){
+    tree -> current = aux;
+    if (tree -> lower_than(key,aux -> key)||(is_equal(tree,aux -> key,key))){
+      if ((ub_node == NULL)||(tree -> lower_than(aux ->key ,ub_node))){
+        ub_node = aux;
+      }
+    }
+    if (0==tree -> lower_than(aux -> key,key)){
 
-  return NULL;
+      aux = aux -> left;
+
+    }else if(1==tree -> lower_than(aux -> key,key)){
+
+      aux = aux -> right;
+    }
+
+  }
+  return ub_node -> key;
 }
 
 
