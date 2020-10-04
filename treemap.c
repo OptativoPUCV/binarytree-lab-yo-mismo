@@ -168,8 +168,10 @@ void * searchTreeMap(TreeMap * tree, void* key)
 
 void * upperBound(TreeMap * tree, void* key) {
   TreeNode * aux;
-  TreeNode * ub_node;
+  TreeNode * ub_node = NULL;
   aux = tree -> root;
+  
+  
   if (aux == NULL){
     return NULL;
   }
