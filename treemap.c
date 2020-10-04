@@ -194,7 +194,7 @@ void * upperBound(TreeMap * tree, void* key) {
       }
     }
   }
-  return ub_node -> value;
+  return NULL;
 }
 
 
