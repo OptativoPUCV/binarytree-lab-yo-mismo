@@ -190,11 +190,11 @@ void * upperBound(TreeMap * tree, void* key) {
 
     if (tree -> lower_than(key,aux -> key)){
 
-      aux = aux -> right;
+      aux = aux -> left;
 
     }else if(tree -> lower_than(aux -> key,key)){
 
-      aux = aux -> left;
+      aux = aux -> right;
     }
     
   }
