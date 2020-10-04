@@ -196,6 +196,9 @@ void * upperBound(TreeMap * tree, void* key) {
     }
     
   }
+  if (aux == NULL){
+    printf("aa");
+  }
   return ub_node->value;
 }
 
