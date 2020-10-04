@@ -170,7 +170,7 @@ void * upperBound(TreeMap * tree, void* key) {
   TreeNode * aux;
   TreeNode * ub_node;
   aux = tree -> root;
-  while((aux -> left !=NULL)||(aux -> right !=NULL)){
+  while((aux -> left !=NULL)|(aux -> right !=NULL)){
 
     tree -> current = aux;
     if (0==tree -> lower_than(aux -> key,key)){
